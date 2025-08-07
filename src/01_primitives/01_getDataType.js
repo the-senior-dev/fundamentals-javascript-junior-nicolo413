@@ -5,6 +5,7 @@
  * @returns {string} - The data type of the variable.
  */
 function getDataType(variable) {
+  return typeof variable;
   // Your code here
 }
 
