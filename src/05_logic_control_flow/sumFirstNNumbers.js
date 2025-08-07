@@ -8,7 +8,14 @@
  * If n is negative, your function should return 0.
  **/
 function sumFirstNNumbers(n) {
+    if (n <= 0) {
+        return 0; // Return 0 for non-positive n
+    }
+    if (n === 1) {
+        return 1;
+    }
     // Your code here
+    return n + sumFirstNNumbers(n - 1); // Recursive call to calculate the sum
 }
 
 

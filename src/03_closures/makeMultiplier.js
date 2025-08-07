@@ -7,9 +7,14 @@
  * @returns {Function} - A function that multiplies its argument by multiplier.
  */
 function makeMultiplier(multiplier) {
+  const isValidNumber = typeof multiplier === 'number' && !isNaN(multiplier);
+  if (!isValidNumber) {
+    throw new Error('Multiplier must be a valid number');
+  }
   // Your code here
   return function(x) {
     // Your code here
+    return x * multiplier;
   }
 }
 
